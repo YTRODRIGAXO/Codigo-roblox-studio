@@ -1,0 +1,10 @@
+local tool = script.Parent.Parent.Parent.Parent:FindFirstChild("Box") -- aquí cambiar
+
+script.Parent.Triggered:Connect(function(player)
+	wait(0.1)
+	local character = player.Character
+	tool.Parent = player.Backpack
+	character.Humanoid:EquipTool(tool)
+	script.Parent.MaxActivationDistance = 0
+
+end)
